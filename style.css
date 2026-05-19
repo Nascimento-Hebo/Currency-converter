@@ -1,0 +1,235 @@
+/*============================== 
+PALETAS DE CORES
+===============================*/
+:root
+/* BACKGROUND */
+--bg-dark: #07111F;
+--bg-card: #0B172A;
+--bg-soft: #112240;
+
+/* PRIMARY */
+--primary: #38E2B5;
+--primary-dark: #14C38E;
+--primary-light: #6FFFE0;
+
+/* SECONDARY */
+--secondary: #2563EB;
+--secondary-light: #3B82F6;
+
+/* TEXT */
+--text-primary: #FFFFFF;
+--text-secondary: #C7D2FE;
+--text-muted: #94A3B8;
+
+/* SUCCESS */
+--success: #22C55E;
+
+/* BORDER */
+--border: rgba(255, 255, 255, 0.08);
+
+/* SHADOW */
+--shadow-primary: rgba(56, 226, 181, 0.25);
+--shadow-blue: rgba(37, 99, 235, 0.25);
+
+
+
+
+
+/*============================== 
+            RESET 
+===============================*/
+
+* {
+    max-width: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background-image: linear-gradient(to right, #07111F, #14C38E);
+}
+
+section {
+    display: flex;
+    width: 700px;
+    padding: 2%;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0px 40px rgba(56, 226, 181, 0.25);
+    background-color: rgba(11, 23, 42, 0.734);
+    border: rgba(255, 255, 255, 0.08) solid 2px;
+}
+
+.container-01 {
+    width: 40%;
+
+    h1 {
+        color: antiquewhite;
+
+        span {
+            color: #14C38E;
+        }
+    }
+
+    p {
+        color: #C7D2FE;
+        width: 90%;
+    }
+}
+
+
+
+.container-02 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    label {
+        width: 80%;
+        color: #C7D2FE;
+        font-size: 14px;
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        select {
+            display: block;
+            margin-top: 4px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #C7D2FE;
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+        }
+    }
+
+    .swap_horizontal {
+        margin: 0 auto;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .Convert-button {
+        width: 80%;
+        margin-top: 16px;
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        background-image: linear-gradient(to right, #22C55E, #14C38E);
+        color: #FFFFFF;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+    }
+
+    input {
+        width: 76%;
+        margin-top: 16px;
+        padding: 5px 6px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #C7D2FE;
+        font-size: 16px;
+    }
+
+    input::placeholder {
+        color: #C7D2FE;
+        opacity: 0.7;
+        text-align: center;
+    }
+}
+
+.all-results {
+    width: 76%;
+    margin-top: 10px;
+    padding: 8px 8px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    .countries {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0px 10px;
+        margin-top: 16px;
+
+        .only01 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 5px;
+            color: #C7D2FE;
+        }
+
+        .logo-conversor {
+            width: 30px;
+            height: 30px;
+        }
+
+        .only02 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 5px;
+            margin-right: 20px;
+            color: #C7D2FE;
+        }
+
+        .country {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            img {
+                width: 20px;
+            }
+
+            p {
+                color: #C7D2FE;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .container-01 {
+        width: 100%;
+        text-align: center;
+
+        .img-dinheiro {
+            margin-top: 2px;
+        }
+    }
+
+    .container-01,
+    .container-02 {
+        width: 100%;
+    }
+
+    .swap_horizontal {
+        margin: 16px auto;
+    }
+}

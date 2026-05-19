@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Moeda</title>
+</head>
+
+<body>
+    <section>
+
+        <div class="container-01">
+            <img class="img-dinheiro" src="./assets/dinheiro.png" alt="Dinheiro" width="40px">
+            <h1>Conversor <br> <span>de Moeda</span></h1>
+            <p>Converta moedas internacionais em tempo real com as melhores taxas do mercado.</p>
+            <img src="./assets/Logo conversor de moedas.png" alt="Logo do Conversor de Moeda" width="200px">
+        </div>
+
+        <div class="container-02">
+            <label for="">
+                De
+                <select id="currency-from">
+                    <option value="KZ">Kwanza Angolano (KZ)</option>
+                    <option value="USD">Dólar Americano (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">Libra Esterlina (GBP)</option>
+                    <option value="JPY">Iene Japonês (JPY)</option>
+                    <option value="BRL">Real Brasileiro (BRL)</option>
+                </select>
+            </label>
+
+            <img class="swap_horizontal"
+                src="./assets/swap_horizontal_circle_40dp_199C71_FILL0_wght400_GRAD0_opsz40.png"
+                alt="Logo de conversão de moedas" class="swap_horizontal">
+
+            <label for="">
+                Para
+                <select id="currency-to">
+                    <option value="KZ">Kwanza Angolano (KZ)</option>
+                    <option value="USD">Dólar Americano (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">Libra Esterlina (GBP)</option>
+                    <option value="JPY">Iene Japonês (JPY)</option>
+                    <option value="BRL">Real Brasileiro (BRL)</option>
+                </select>
+            </label>
+
+            <input type="text" placeholder=" 0,000">
+            <button class="Convert-button">Convert now</button>
+
+            <div class="all-results">
+
+                <div class="countries">
+                    <div class="only01">
+                        <img src="./assets/ANGOLA.png" alt="Bandeira de Angola" width="50px">
+                        <p>1.000.00KZ</p>
+                    </div>
+                    <img src="assets/image-conversor.png" alt="image conversor" class="logo-conversor">
+                    <div class="only02">
+                        <img src="./assets/USA.png" alt="Bandeira do Estados Unidos" width="50px">
+                        <p>1.000.00USD</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+<script src="script.js"></script>
+
+</html>
