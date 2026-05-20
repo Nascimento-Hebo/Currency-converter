@@ -212,7 +212,7 @@ section {
 @media (max-width: 768px) {
 
     body {
-        padding: auto 0;
+        padding: 20px auto;
     }
 
     section {
