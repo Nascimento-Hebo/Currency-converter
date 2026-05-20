@@ -51,6 +51,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100dvh;
+    padding: 1%;
     background-image: linear-gradient(to right, #07111F, #14C38E);
 }
 
@@ -132,7 +133,7 @@ section {
         color: #FFFFFF;
         font-size: 16px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+
 
     }
 

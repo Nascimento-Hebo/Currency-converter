@@ -1,10 +1,14 @@
 const button = document.querySelector('.Convert-button');
-button.addEventListener('click', convertCurrency);
 
 function convertCurrency() {
-    const currencyFrom = document.getElementById('#currency-from');
-    const currencyTo = document.getElementById('#currency-to');
-    const amount = document.querySelector('.currency-from').value;
+    const input = document.querySelector('.currency-input').value;
+    const ParagraphValue = document.querySelector('.value-placed');
+    const ParagraphResult = document.querySelector('.value-result');
 
+    ParagraphValue.innerHTML = input
+    ParagraphResult.innerHTML = convertCurrency
 
+    const ValllorEmDollar = 5.25;
+    convertCurrency = input / ValllorEmDollar;
 }
+button.addEventListener('click', convertCurrency);
