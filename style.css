@@ -224,6 +224,10 @@ section {
         padding-bottom: 4dvh;
     }
 
+    .logo-central {
+        width: 130px;
+    }
+
     .paragraph {
         width: 100%;
         margin: 0 auto;

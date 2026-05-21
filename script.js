@@ -5,8 +5,15 @@ function convertCurrency() {
     const ParagraphValue = document.querySelector('.value-placed');
     const ParagraphResult = document.querySelector('.value-result');
 
-    ParagraphValue.innerHTML = input
-    ParagraphResult.innerHTML = convertCurrency
+    ParagraphValue.innerHTML = new Intl.NumberFormat('pt-PT', {
+        style: 'currency',
+        currency: 'AOA'
+    }).format(input);
+
+    ParagraphResult.innerHTML = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(convertCurrency);
 
     const ValllorEmDollar = 5.25;
     convertCurrency = input / ValllorEmDollar;
