@@ -23,7 +23,7 @@
         <div class="container-02">
             <label for="">
                 De
-                <select id="currency-from">
+                <select id="currency-from" onchange="changeCurrency()">
                     <option value="USD">Dólar Americano (USD)</option>
                     <option value="EUR">Euro (EUR)</option>
                     <option value="BRL">Real Brasileiro (BRL)</option>
@@ -53,7 +53,7 @@
                     </div>
                     <img src="assets/image-conversor.png" alt="image conversor" class="logo-conversor">
                     <div class="only02">
-                        <img src="./assets/USA.png" alt="Bandeira do Estados Unidos" width="50px">
+                        <img id="bandeiraUsa" src="./assets/USA.png" alt="Bandeira do Estados Unidos" width="50px">
                         <p class="value-result">$ 000.00</p>
                     </div>
                 </div>

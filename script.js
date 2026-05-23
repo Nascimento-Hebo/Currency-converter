@@ -1,11 +1,12 @@
 const button = document.querySelector('.Convert-button');
+const select = document.querySelector('#currency-from');
 
 function convertCurrency() {
     const input = document.querySelector('.currency-input').value;
     const ParagraphValue = document.querySelector('.value-placed');
     const ParagraphResult = document.querySelector('.value-result');
     const select = document.querySelector('#currency-from').value;
-    console.log(select)
+
 
     const ValorEmDollar = 5.25;
     const ValorEmReal = 182.29;
@@ -38,4 +39,23 @@ function convertCurrency() {
     }).format(input)
 
 }
+
+function changeCurrency() {
+    const img = document.querySelector('#bandeiraUsa')
+
+    if (select.value == 'USD') {
+        img.src = './assets/USA.png'
+    }
+
+    if (select.value == 'EUR') {
+        img.src = './assets/images.euro.png'
+    }
+
+    if (select.value == 'BRL') {
+        img.src = './assets/brasil.png'
+    }
+
+    convertCurrency()
+}
+select.addEventListener('change', changeCurrency);
 button.addEventListener('click', convertCurrency);
