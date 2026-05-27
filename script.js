@@ -25,7 +25,7 @@ function PRIMEIROSELECT() {
     }
 
     if (selectUM.value == 'BRL') {
-        img1.src = './assets/BRASIL.png'
+        img1.src = './assets/brasil1.png'
         paragrafo1.innerHTML = 'R$ 000.00'
     }
 
@@ -48,7 +48,7 @@ function SEGUNDOSELECT() {
     }
 
     if (select2.value == 'BRL') {
-        img2.src = './assets/BRASIL.png'
+        img2.src = './assets/brasil1.png'
         paragrafo2.innerHTML = 'R$ 000.00'
     }
     console.log(img2.src)
