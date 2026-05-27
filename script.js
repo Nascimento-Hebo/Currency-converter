@@ -1,61 +1,108 @@
 const button = document.querySelector('.Convert-button');
-const select = document.querySelector('#currency-from');
+const selectUM = document.querySelector('#SelectUM');
+const select2 = document.querySelector('#SelectDois');
+const iMGconvert = document.getElementById("IMGconvert");
+//FUNÇÃO PARA SABER SE O MEU PRIMEIRO SELECT FOI ABERTO
 
-function convertCurrency() {
-    const input = document.querySelector('.currency-input').value;
-    const ParagraphValue = document.querySelector('.value-placed');
-    const ParagraphResult = document.querySelector('.value-result');
-    const select = document.querySelector('#currency-from').value;
+function PRIMEIROSELECT() {
+    const selectUM = document.getElementById('SelectUM');
+    const img1 = document.querySelector('.CasoUm');
+    const paragrafo1 = document.getElementById('paragrafo1');
 
-
-    const ValorEmDollar = 5.25;
-    const ValorEmReal = 182.29;
-    const ValorEmEuro = 1000;
-
-    if (select == 'USD') {
-        ParagraphResult.innerHTML = new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD'
-        }).format(input / ValorEmDollar);
+    if (selectUM.value == 'AOA') {
+        img1.src = './assets/ANGOLA.png'
+        paragrafo1.innerHTML = 'Kz 000.00'
     }
 
-    if (select == 'EUR') {
-        ParagraphResult.innerHTML = new Intl.NumberFormat('de-DE', {
-            style: 'currency',
-            currency: 'EUR'
-        }).format(input / ValorEmEuro);
+    if (selectUM.value == 'USD') {
+        img1.src = './assets/USA.png'
+        paragrafo1.innerHTML = '$ 000.00'
     }
 
-    if (select == 'BRL') {
-        ParagraphResult.innerHTML = new Intl.NumberFormat('pt-br', {
-            style: 'currency',
-            currency: 'BRL'
-        }).format(input / ValorEmReal);
+    if (selectUM.value == 'EUR') {
+        img1.src = './assets/images.euro.png'
+        paragrafo1.innerHTML = '€ 000.00'
     }
 
-    ParagraphValue.innerHTML = new Intl.NumberFormat('pt-AO', {
+    if (selectUM.value == 'BRL') {
+        img1.src = './assets/brasil.png'
+        paragrafo1.innerHTML = 'R$ 000.00'
+    }
+
+}
+
+//FUNÇÃO PARA SABER SE O MEU SEGUNDO SELECT FOI ABERTO
+function SEGUNDOSELECT() {
+    const Select2 = document.getElementById("SelectDois");
+    const img2 = document.getElementById("bandeiraUsa");
+    const paragrafo2 = document.getElementById('paragrafo2')
+
+    if (select2.value == 'USD') {
+        img2.src = './assets/USA.png'
+        paragrafo2.innerHTML = '$ 000.00'
+    }
+
+    if (select2.value == 'EUR') {
+        img2.src = './assets/images.euro.png'
+        paragrafo2.innerHTML = '€ 000.00'
+    }
+
+    if (select2.value == 'BRL') {
+        img2.src = './assets/brasil.png'
+        paragrafo2.innerHTML = 'R$ 000.00'
+    }
+
+    if (select2.value == 'AOA') {
+        img2.src = './assets/ANGOLA.png'
+        paragrafo2.innerHTML = 'Kz 000.00'
+    }
+}
+////////////BOTÃO DE CONVERTER////////////////
+function CONVERTERVALORES() {
+    const input = Number(document.getElementById('input').value);
+    const ValorOrigem = document.querySelector('.Paragrafo1');
+    const ValorDestino = document.querySelector('.Paragrafo2');
+    const moedaOrigem = document.getElementById('SelectUM').value;
+    const moedaDestino = document.getElementById('SelectDois').value;
+
+    const moedas = {
+
+        USD: 1,
+
+        BRL: 5.45,
+
+        EUR: 0.92,
+
+        AOA: 910
+    };
+
+    const valorConvertido = (input / moedas[moedaOrigem] * moedas[moedaDestino]);
+
+    const locais = {
+
+        BRL: 'pt-BR',
+
+        USD: 'en-US',
+
+        EUR: 'de-DE',
+
+        AOA: 'pt-AO'
+    };
+
+    const localDaMoeda = locais[moedaDestino]
+
+    ValorOrigem.innerHTML = input
+
+    ValorDestino.innerHTML = new Intl.NumberFormat(localDaMoeda, {
         style: 'currency',
-        currency: 'AOA'
-    }).format(input)
+        currency: moedaDestino
+    }).format(valorConvertido);
 
 }
 
-function changeCurrency() {
-    const img = document.querySelector('#bandeiraUsa')
 
-    if (select.value == 'USD') {
-        img.src = './assets/USA.png'
-    }
 
-    if (select.value == 'EUR') {
-        img.src = './assets/images.euro.png'
-    }
-
-    if (select.value == 'BRL') {
-        img.src = './assets/brasil.png'
-    }
-
-    convertCurrency()
-}
-select.addEventListener('change', changeCurrency);
-button.addEventListener('click', convertCurrency);
+//CHAMA AS NOSSAS FUNÇÕES GLOBALMENTE, COM EVENTOS LOOP
+selectUM.addEventListener('change', PRIMEIROSELECT);
+select2.addEventListener('change', SEGUNDOSELECT);
+button.addEventListener('click', CONVERTERVALORES);

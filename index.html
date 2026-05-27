@@ -21,9 +21,11 @@
         </div>
 
         <div class="container-02">
+            <!-- AQUI TEMOS O PRIMEIRO SELECT -->
             <label for="">
                 De
-                <select id="currency-from" onchange="changeCurrency()">
+                <select id="SelectUM" onchange="PRIMEIROSELECT()">
+                    <option value="AOA">Kwanza Angolano (KZ)</option>
                     <option value="USD">Dólar Americano (USD)</option>
                     <option value="EUR">Euro (EUR)</option>
                     <option value="BRL">Real Brasileiro (BRL)</option>
@@ -33,28 +35,35 @@
             <img class="swap_horizontal"
                 src="./assets/swap_horizontal_circle_40dp_199C71_FILL0_wght400_GRAD0_opsz40.png"
                 alt="Logo de conversão de moedas" class="swap_horizontal">
-
+            <!-- AQUI TEMOS O SEGUNDO SELECT -->
             <label>
                 Para
-                <select id="currency-to">
-                    <option value="KZ">Kwanza Angolano (KZ)</option>
+                <select id="SelectDois" onchange="SEGUNDOSELECT()">
+                    <option value="USD">Dólar Americano (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="BRL">Real Brasileiro (BRL)</option>
+                    <option value="AOA">Kwanza Angolano (KZ)</option>
                 </select>
             </label>
-            <!-- AQUI TENHO O MEU BOTÃO DE CONVERSÃO E O INPUT -->
-            <input type="text" placeholder=" 0,000" class="currency-input">
-            <button class="Convert-button" onclick="convertCurrency()">Convert now</button>
+            <!-- AQUI TENHO O MEU INPUT -->
+            <input type="text" placeholder=" 0,000" id="input">
+            <!-- AQUI TENHO O MEU BOTÃO DE CONVERSÃO -->
+            <button class="Convert-button" onclick="CONVERTERVALORES()">Convert now</button>
 
             <div class="all-results">
 
                 <div class="countries">
+                    <!-- PRIMEIRA IMAGEM -->
                     <div class="only01">
-                        <img class="flag" src="./assets/ANGOLA.png" alt="Bandeira de Angola" width="50px">
-                        <p class="value-placed">KZ000.00</p>
+                        <img class="CasoUm" src="./assets/ANGOLA.png" alt="Bandeira de Angola" width="50px">
+                        <p id="paragrafo1" class="Paragrafo1">KZ000.00</p>
                     </div>
-                    <img src="assets/image-conversor.png" alt="image conversor" class="logo-conversor">
+                    <!-- IMAGEM DO CONVERSOR -->
+                    <img src="assets/image-conversor.png" alt="image conversor" class="logo-conversor" id="IMGconvert">
+                    <!-- SEGUNDA IMAGEM -->
                     <div class="only02">
                         <img id="bandeiraUsa" src="./assets/USA.png" alt="Bandeira do Estados Unidos" width="50px">
-                        <p class="value-result">$ 000.00</p>
+                        <p id="paragrafo2" class="Paragrafo2">$ 000.00</p>
                     </div>
                 </div>
             </div>
