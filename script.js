@@ -25,7 +25,7 @@ function PRIMEIROSELECT() {
     }
 
     if (selectUM.value == 'BRL') {
-        img1.src = './assets/brasil.png'
+        img1.src = './assets/BRASIL.png'
         paragrafo1.innerHTML = 'R$ 000.00'
     }
 
@@ -48,9 +48,10 @@ function SEGUNDOSELECT() {
     }
 
     if (select2.value == 'BRL') {
-        img2.src = './assets/brasil.png'
+        img2.src = './assets/BRASIL.png'
         paragrafo2.innerHTML = 'R$ 000.00'
     }
+    console.log(img2.src)
 
     if (select2.value == 'AOA') {
         img2.src = './assets/ANGOLA.png'
@@ -99,8 +100,6 @@ function CONVERTERVALORES() {
     }).format(valorConvertido);
 
 }
-
-
 
 //CHAMA AS NOSSAS FUNÇÕES GLOBALMENTE, COM EVENTOS LOOP
 selectUM.addEventListener('change', PRIMEIROSELECT);
